@@ -1,0 +1,140 @@
+# Conventional Commits - Guía Rápida
+
+[![Open for contributions](https://img.shields.io/badge/contributions-welcome-blue.svg?logo=github)](../CONTRIBUTING.md)
+
+Esta guía explica el formato de commits que usamos en la organización.
+
+## ¿Por qué Conventional Commits?
+
+- 📖 Historial de commits legible
+- 🤖 Generación automática de CHANGELOG
+- 🔢 Versionado semántico automático
+- 👥 Comunicación clara entre equipos
+
+## Formato
+
+```
+<tipo>[ámbito opcional]: <descripción>
+
+[cuerpo opcional]
+
+[footer(s) opcional]
+```
+
+## Tipos de Commits y Mapeo a CHANGELOG
+
+Usamos el estándar [Keep a Changelog](https://keepachangelog.com/) para el CHANGELOG:
+
+| Tipo | Sección CHANGELOG | Bump SemVer | Descripción |
+|------|-------------------|-------------|-------------|
+| `feat` | **Added** | MINOR (0.X.0) | Nueva funcionalidad |
+| `fix` | **Fixed** | PATCH (0.0.X) | Corrección de bug |
+| `perf` | **Changed** | PATCH | Mejora de rendimiento |
+| `refactor` | **Changed** | - | Cambio de código sin feat ni fix |
+| `docs` | **Changed** | - | Solo documentación |
+| `style` | (oculto) | - | Formato (espacios, comas, etc.) |
+| `test` | (oculto) | - | Añadir o corregir tests |
+| `build` | (oculto) | - | Cambios en build o dependencias |
+| `ci` | (oculto) | - | Cambios en CI/CD |
+| `chore` | (oculto) | - | Tareas de mantenimiento |
+| `revert` | **Changed** | - | Revierte un commit anterior |
+| `BREAKING CHANGE` | **⚠ BREAKING** | MAJOR (X.0.0) | Cambio incompatible |
+
+## Ejemplos
+
+### ✅ Commits Correctos
+
+```bash
+# Nueva funcionalidad → Sección "Added"
+feat: add user authentication system
+
+# Corrección de bug → Sección "Fixed"
+fix: resolve login timeout issue
+
+# Con ámbito
+feat(api): add pagination to users endpoint
+
+# Con cuerpo explicativo
+fix: prevent race condition in data sync
+
+Multiple users reported data loss when syncing simultaneously.
+This fix adds a mutex lock to prevent concurrent writes.
+
+# Breaking change → Sección "BREAKING CHANGES"
+feat!: remove deprecated API endpoints
+
+BREAKING CHANGE: The /v1/users endpoint has been removed.
+Use /v2/users instead.
+```
+
+### ❌ Commits Incorrectos
+
+```bash
+# Sin tipo
+added new feature
+
+# Tipo en mayúsculas
+FEAT: add login
+
+# Descripción muy larga (usa el cuerpo)
+feat: add user authentication system with JWT tokens and refresh token rotation including password reset functionality
+```
+
+## Resultado en CHANGELOG
+
+Cuando usas los tipos correctamente, el `CHANGELOG` puede generarse y mantenerse automáticamente usando github actions como `.github/workflows/release-please.yml`, que tras ejecutarlo el `CHANGELOG` se debería ver así:
+
+```markdown
+## [1.2.0] - 2026-01-15
+
+### Added
+- Add user authentication system (#15)
+- Implement dark mode support (#18)
+
+### Fixed
+- Resolve memory leak in dashboard (#16)
+- Fix login button not responding (#17)
+
+### Changed
+- Improve database query performance (#20)
+```
+
+> [!TIP]
+> 1. **Descripción clara** - Describe qué hace el cambio
+> 2. **Sin punto final** - No termines la descripción con punto
+> 3. **Modo imperativo** - "add feature" no "added feature"
+> 4. **Sé específico** - "fix login button" mejor que "fix bug"
+> 5. **Un cambio por commit** - Facilita el rollback
+
+## Títulos de Pull Request
+
+Los títulos de PR **también deben seguir este formato**, ya que se usan para generar el CHANGELOG.
+
+```
+feat: add dark mode support
+fix: resolve memory leak in dashboard
+docs: update API documentation
+```
+
+## Validación de commits
+
+Se recomienda revisar tus mensajes de commit antes de enviarlos para asegurar el cumplimiento.
+
+Además se puede usar `pre-commit` para validar tus commits localmente:
+
+```bash
+pre-commit run --hook-type commit-msg
+```
+
+Si tu commit es rechazado, verás un error indicando el problema.
+
+> [!NOTE]
+> Te dejo documentación de `pre-commit` y un artículo que te puede ayudar a entender mejor el uso de `pre-commit` para que puedas ver más opciones y configuraciones: 
+> - [Pre-commit](https://pre-commit.com/)
+> - [Mejorando nuestro código con pre-commit](https://blog.damavis.com/mejorando-nuestro-codigo-con-pre-commit/)
+
+## Referencias
+
+- [Conventional Commits Specification](https://www.conventionalcommits.org/)
+- [Keep a Changelog](https://keepachangelog.com/)
+- [Semantic Versioning](https://semver.org/)
