@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0](https://github.com/MartinM10/dev-reference-guide/compare/v1.1.0...v1.2.0) (2026-01-09)
+
+
+### Added
+
+* initial commit of reference guide ([21de7d2](https://github.com/MartinM10/dev-reference-guide/commit/21de7d220c2eb10b801b4d7fb3feeaf3dfcfdb3d))
+
+
+### Changed
+
+* translate contributing guide to spanish ([811be3e](https://github.com/MartinM10/dev-reference-guide/commit/811be3e4047c2ab8eb8ce4cf3d7d24b335b4b751))
+
 ## [Unreleased]
 
 ### Added
