@@ -1,35 +1,35 @@
-# 🧐 Want to help? Here's how
+# 🧐 ¿Quieres ayudar? Aquí te explicamos cómo
 
-Documents are written using GitHub Flavored Markdown (GFM). [Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+La documentación se escribe usando GitHub Flavored Markdown (GFM). [Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-## How to update the docs
+## Cómo actualizar la documentación
 
-1. Go to the repository root.
-2. Select a document you’d like to work on.
+1. Ve a la raíz del repositorio.
+2. Selecciona el documento en el que te gustaría trabajar.
 
-   _Something feels wrong? Unsure about the changes? [Open an issue to discuss them!](https://github.com/MartinM10/dev-reference-guide/issues/new)_
+   _¿Algo no parece correcto? ¿Tienes dudas sobre los cambios? [¡Abre un issue para discutirlo!](https://github.com/MartinM10/dev-reference-guide/issues/new)_
 
-   _If you are looking where to contribute, we have a list of documents we'd love to see written! [Check out our projects](https://github.com/MartinM10/dev-reference-guide/projects)._
+   _Si estás buscando dónde contribuir, ¡tenemos una lista de documentos que nos encantaría ver escritos! [Consulta nuestros proyectos](https://github.com/MartinM10/dev-reference-guide/projects)._
 
-3. Search for the [![Open for contributions](https://img.shields.io/badge/contributions-welcome-blue.svg?logo=github)](CONTRIBUTING.md) badge.
+3. Busca el badge [![Open for contributions](https://img.shields.io/badge/contributions-welcome-blue.svg?logo=github)](CONTRIBUTING.md).
 
-   _No badge? Maybe the document is not open for contributions (e.g., the official calendar). [Open an issue instead](https://github.com/MartinM10/dev-reference-guide/issues/new)_.
+   _¿No hay badge? Tal vez el documento no está abierto para contribuciones (por ejemplo, el calendario oficial). [Abre un issue en su lugar](https://github.com/MartinM10/dev-reference-guide/issues/new)_.
 
-4. In the top-right, select **Edit this file** and make changes.
-5. For the commit message, please follow our [Conventional Commits guide](docs/CONVENTIONAL_COMMITS.md). Use 3-5 words, start with `docs:`, and do not end with a period.
+4. En la esquina superior derecha, selecciona **Edit this file** y realiza los cambios.
+5. Para el mensaje del commit, por favor sigue nuestra [guía de Conventional Commits](docs/CONVENTIONAL_COMMITS.md). Usa de 3 a 5 palabras, comienza con `docs:`, y no termines con un punto.
 
-   _Do:_
+   _Correcto:_
 
-   > docs: correct spelling of CHANGELOG
+   > docs: corregir ortografía en CHANGELOG
    >
-   > docs: improve VMs setup section
+   > docs: mejorar sección de configuración de VMs
 
-   _Do not:_
+   _Incorrecto:_
 
-   > minor changes
+   > cambios menores
    >
    > WIP
 
-6. Select **Commit changes** 🎉
+6. Selecciona **Commit changes** 🎉
 
-For more complex contributions, you can open an issue to describe the changes you'd like to see.
+Para contribuciones más complejas, puedes abrir un issue para describir los cambios que te gustaría ver.
